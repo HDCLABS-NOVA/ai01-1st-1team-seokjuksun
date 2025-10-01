@@ -1,0 +1,2 @@
+*.csv filter=lfs diff=lfs merge=lfs -text
+실습데이터.csv filter=lfs diff=lfs merge=lfs -text

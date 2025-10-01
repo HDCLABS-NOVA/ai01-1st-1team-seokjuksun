@@ -1,0 +1,7 @@
+# 필요한 패키지 알아서 추가하세요
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+streamlit
