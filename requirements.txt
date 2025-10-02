@@ -5,3 +5,7 @@ matplotlib
 seaborn
 scikit-learn
 streamlit
+mlforecast
+xgboost
+lightgbm
+catboost
