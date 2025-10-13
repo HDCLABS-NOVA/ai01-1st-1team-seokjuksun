@@ -14,7 +14,7 @@ file_path= "../dataset/실습데이터.csv"
 df_first= pd.read_csv(file_path, encoding= "cp949")
 
 # 기상청 CSV 불러오기
-file_path= "../dataset/Temp_Humid_Log.csv"
+file_path= "../dataset/TempHumidLog.csv"
 df= pd.read_csv(file_path, encoding= "cp949")
 
 # '수원' 데이터만 추출
@@ -50,6 +50,9 @@ df_merged.iloc[-1, df_merged.columns.get_loc("습도(%)")] = 79.5
 # 온, 습도 열이 NaN이면 선형보간 (정각 데이터 사이를 연결)
 df_merged["기온(°C)"]= df_merged["기온(°C)"].interpolate(method= "linear").round(5)
 df_merged["습도(%)"]= df_merged["습도(%)"].interpolate(method= "linear").round(5)
+
+# 컬럼 명 수정
+df_merged.columns = df_merged.columns.str.replace('.xlsx', '', regex=False)
 
 # 보간 데이터 csv 파일로 저장
 df_merged.to_csv("../dataset/FinalData.csv", encoding= "utf-8-sig", index= True)
