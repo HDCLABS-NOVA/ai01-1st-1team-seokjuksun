@@ -127,7 +127,6 @@ def update(frame):
 
     return line, scat, upper_line, lower_line
 
-
 # 애니메이션 실행
 ani = FuncAnimation(
     fig,
