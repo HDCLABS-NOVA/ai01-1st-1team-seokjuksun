@@ -1,8 +1,10 @@
 import streamlit as st
 import plotly.graph_objects as go
+import pandas as pd
 
 # --- 메인 탭: 이상치 탐지 그래프 (크기 변경 없음) ---
 def display_realtime_chart(df, upper_bound, lower_bound, target_column):
+    df = df[df['Timestamp'] >= pd.to_datetime('2022-05-13 00:00:00')].reset_index(drop=True)
     window_size = 50
     current_index = st.session_state.plot_index
     start_index = max(0, current_index - window_size + 1)
@@ -21,6 +23,7 @@ def display_realtime_chart(df, upper_bound, lower_bound, target_column):
 
 # --- 윤활 및 냉각 탭: 4개 컬럼 동시 표시 그래프 ---
 def display_lubrication_chart(df):
+    df = df[df['Timestamp'] >= pd.to_datetime('2022-05-13 00:00:00')].reset_index(drop=True)
     window_size = 50
     current_index = st.session_state.plot_index
     start_index = max(0, current_index - window_size + 1)
@@ -38,6 +41,7 @@ def display_lubrication_chart(df):
 
 # --- 금속 배치 탭: 연속형/이산형 분리 그래프 ---
 def create_metal_placement_charts(df):
+    df = df[df['Timestamp'] >= pd.to_datetime('2022-05-13 00:00:00')].reset_index(drop=True)
     window_size = 50
     current_index = st.session_state.plot_index
     start_index = max(0, current_index - window_size + 1)
@@ -62,6 +66,7 @@ def create_metal_placement_charts(df):
 
 # --- 타격/스트로크 공정 탭: 2개 그래프 분리 ---
 def create_stroke_process_charts(df):
+    df = df[df['Timestamp'] >= pd.to_datetime('2022-05-13 00:00:00')].reset_index(drop=True)
     window_size = 50
     current_index = st.session_state.plot_index
     start_index = max(0, current_index - window_size + 1)
@@ -86,6 +91,7 @@ def create_stroke_process_charts(df):
 
 # --- 플래시 형성 및 트리밍 탭: 2개 컬럼 통합 그래프 ---
 def create_trimming_chart(df):
+    df = df[df['Timestamp'] >= pd.to_datetime('2022-05-13 00:00:00')].reset_index(drop=True)
     window_size = 50
     current_index = st.session_state.plot_index
     start_index = max(0, current_index - window_size + 1)
@@ -103,6 +109,7 @@ def create_trimming_chart(df):
 
 # --- 부품 제거 탭: 6개 컬럼 통합 그래프 ---
 def create_part_removal_chart(df):
+    df = df[df['Timestamp'] >= pd.to_datetime('2022-05-13 00:00:00')].reset_index(drop=True)
     window_size = 50
     current_index = st.session_state.plot_index
     start_index = max(0, current_index - window_size + 1)
@@ -120,6 +127,7 @@ def create_part_removal_chart(df):
 
 # --- 다단 단조/이송 공정 탭: 3개 그래프 분리 ---
 def create_transfer_process_charts(df):
+    df = df[df['Timestamp'] >= pd.to_datetime('2022-05-13 00:00:00')].reset_index(drop=True)
     window_size = 50
     current_index = st.session_state.plot_index
     start_index = max(0, current_index - window_size + 1)

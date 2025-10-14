@@ -3,18 +3,19 @@ import streamlit as st
 
 # --- 함수 1: 모든 곳에서 공유하는 기본 데이터 로딩 ---
 # show_spinner 파라미터를 사용하여 로딩 중에 표시될 메시지를 지정합니다.
-@st.cache_data(show_spinner="설비 데이터 로딩중...")
+@st.cache_data(show_spinner="설비 데이터 준비중...")
 def load_base_data():
     """
     앱 세션 동안 단 한 번만 실행되어 기본 데이터프레임을 로드하고 캐시합니다.
     """
     df = pd.read_csv("../dataset/FinalData.csv", parse_dates=['Timestamp'], low_memory=False)
+    df['Timestamp'] = pd.to_datetime(df['Timestamp'])
     df = df.sort_values('Timestamp').reset_index(drop=True)
     return df
 
 # --- 함수 2: 그래프에 필요한 동적 이상치 계산 ---
 # 이 함수가 실행될 때도 사용자 친화적인 메시지를 표시합니다.
-@st.cache_data(show_spinner="그래프 데이터 계산중...")
+@st.cache_data(show_spinner="그래프 준비중...")
 def calculate_anomaly_stats(_df, target_column):
     """
     입력받은 데이터프레임과 컬럼명에 따라 이상치 통계를 계산합니다.

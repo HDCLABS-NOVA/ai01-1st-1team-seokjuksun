@@ -4,12 +4,13 @@ from services.data_loader import load_base_data, calculate_anomaly_stats
 from components.plots import display_realtime_chart
 
 def render_main_page():
-    st.header("메인")
-
     # --- 데이터 준비 ---
     base_df = load_base_data()
-    
-    target_timestamp = pd.to_datetime("2022-05-13 00:00:00")
+
+    # ✅ 변경 포인트: app.py에서 st.session_state에 저장한 "current_timestamp" 사용
+    target_timestamp = st.session_state.get("current_timestamp", pd.to_datetime("2022-05-13 00:00:00"))
+
+    # ✅ 해당 시각의 행 가져오기
     specific_data_row = base_df[base_df['Timestamp'] == target_timestamp]
     specific_data = specific_data_row.iloc[0] if not specific_data_row.empty else None
 
@@ -21,22 +22,22 @@ def render_main_page():
     with col1:
         # --- 날씨 정보 카드 ---
         with st.container(border=True):
-            st.write("현재 날씨")
-            date_str = target_timestamp.strftime('%Y년 %m월 %d일 %H시 %M분')
-            st.write(f"({date_str} 기준)")
+            st.write("☀️ 현재 날씨")
+            date_str = target_timestamp.strftime('%Y년 %m월 %d일 %H시 %M분 %S초')
+            st.write(f"{date_str} 기준")
 
             if specific_data is not None:
                 temperature = specific_data['기온(°C)']
                 humidity = specific_data['습도(%)']
-                st.metric("기온", f"{temperature:.1f} °C")
-                st.metric("습도", f"{humidity:.1f} %")
+                st.metric("기온 🌡️", f"{temperature:.1f} °C")
+                st.metric("습도 💧", f"{humidity:.1f} %")
             else:
                 st.write("데이터를 찾을 수 없습니다.")
 
         # --- 설비 상태 카드 ---
         with st.container(border=True):
-            st.write("설비 상태")
-            
+            st.write("⚙️ 설비 상태")
+
             if specific_data is not None:
                 current_status = specific_data.get('predict')
             else:
