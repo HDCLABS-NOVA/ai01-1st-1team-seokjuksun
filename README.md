@@ -34,10 +34,10 @@
 ## 🛠기술 스택
 ---
  - **Python 3.13**
- - **데이터 수집**: Kamp 냉간단조 공정 데이터 ,기상청 데이 활용
- - **분석**: Pandas, Numpy
- - **시각화**: Matplotlib, Seaborn, Ploty
- - **모델링**: XGBoost
+ - **데이터 수집**: Kamp 냉간단조 공정 데이터 ,기상청 데이터 활용
+ - **데이터 분석**: Pandas, Numpy
+ - **데이터 시각화**: Matplotlib, Seaborn, Ploty, Streamlit
+ - **모델링**: XGBoost, LightGBM, Random Forest
 
 ## 📁프로젝트 구조
 ---
@@ -59,6 +59,20 @@ project/
 
 ## 수행 결과
 ---
+**이상치 모니터링**
+
+<br>
+
+**공정데이터 분석 결과**
+
+<img src= "https://github.com/user-attachments/assets/1b2fb12f-eb0c-4498-a4da-974613b3187a" width= "560" height= "360"/>
+
+- STATUS= 데이터에서 공정의 정상/비정상 상태를 나타내는 값
+- 시간에 따른 STATUS를 시각화하고, 비정상 상태일 때를 따로 표시함
+
+<br>
+
+
 
 
 <br>
