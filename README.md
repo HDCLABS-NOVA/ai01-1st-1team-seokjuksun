@@ -15,7 +15,7 @@
 ---
 | 박희선 | 김채원 | 석상훈 | 이주연 |
 |:--:|:--:|:--:|:--:|
-| <img src="https://github.com/user-attachments/assets/17c996f7-4655-45fa-a7a0-47da3b7faa90" width="120"/> | <img src="https://github.com/user-attachments/assets/06a8ded5-1079-4f0f-b4d9-04a271b4ac8c" width="120"/> | <img src="https://your-image-url3.png" width="120"/> | <img src="https://your-image-url4.png" width="120"/> |
+| <img src="https://github.com/user-attachments/assets/17c996f7-4655-45fa-a7a0-47da3b7faa90" width="120"/> | <img src="https://github.com/user-attachments/assets/06a8ded5-1079-4f0f-b4d9-04a271b4ac8c" width="120"/> | <img src="https://github.com/user-attachments/assets/d4ba3a03-f53a-4ed0-9576-5be7117ffcdc" width="120" height="160"/> | <img src="https://your-image-url4.png" width="120"/> |
 | [GitHub](https://github.com/username1) | [GitHub](https://github.com/username2) | [GitHub](https://github.com/username3) | [GitHub](https://github.com/username4) |
 
 <br>
