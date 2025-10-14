@@ -15,6 +15,9 @@ def main():
     # 대시보드의 메인 제목을 설정합니다.
     st.title("냉간단조 공정 설비 데이터 대시보드")
 
+    # 현재 세션 상태를 기반으로 전체 UI를 한 번 렌더링합니다.
+    create_tabs()
+
     # --- 중앙 시간 제어 (앱의 "심장") ---
     base_df = load_base_data()
     plot_df = base_df[base_df['Timestamp'] >= pd.to_datetime('2022-05-13 00:00:00')]
@@ -25,8 +28,8 @@ def main():
     current_row = plot_df.iloc[st.session_state.plot_index]
     st.session_state.current_timestamp = current_row['Timestamp']
 
-    # 현재 세션 상태를 기반으로 전체 UI를 한 번 렌더링합니다.
-    create_tabs()
+    # # 현재 세션 상태를 기반으로 전체 UI를 한 번 렌더링합니다.
+    # create_tabs()
 
     # 다음 렌더링을 위해 인덱스를 1 증가시킵니다.
     st.session_state.plot_index = (st.session_state.plot_index + 1) % data_len

@@ -11,7 +11,13 @@ def render_main_page():
     target_timestamp = st.session_state.get("current_timestamp", pd.to_datetime("2022-05-13 00:00:00"))
 
     # ✅ 해당 시각의 행 가져오기
-    specific_data_row = base_df[base_df['Timestamp'] == target_timestamp]
+    # specific_data_row = base_df[base_df['Timestamp'] == target_timestamp]
+    # specific_data = specific_data_row.iloc[0] if not specific_data_row.empty else None
+
+    specific_data_row = base_df[
+        (base_df['Timestamp'] >= target_timestamp) &
+        (base_df['Timestamp'] < target_timestamp + pd.Timedelta(seconds=1))
+        ]
     specific_data = specific_data_row.iloc[0] if not specific_data_row.empty else None
 
     # --- 페이지를 왼쪽(정보/컨트롤)과 오른쪽(그래프) 두 개의 열로 나눕니다. ---
@@ -45,12 +51,10 @@ def render_main_page():
 
             if current_status == 'normal':
                 status_display = "정상 🟢"
-            elif current_status == 'abnormal':
-                status_display = "비정상 🔴"
             elif current_status in ['special_0', 'special_1']:
                 status_display = "경고 🟡"
             else:
-                status_display = "알 수 없음"
+                status_display = "정상 🟢"
 
             st.markdown(f"<div style='text-align: center; font-size: 24px; padding: 1rem 0;'>{status_display}</div>", unsafe_allow_html=True)
 

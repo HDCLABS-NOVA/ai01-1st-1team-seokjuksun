@@ -45,10 +45,29 @@ def calculate_anomaly_stats(_df, target_column):
     return plot_df, upper_bound, lower_bound
 
 # --- 함수 3: 날씨 카드용 고정 데이터 로딩 (변경 없음) ---
-def get_data_for_specific_time(timestamp_str):
-    df = pd.read_csv("../dataset/FinalData.csv")
-    df['Timestamp'] = pd.to_datetime(df['Timestamp'])
-    specific_data = df[df['Timestamp'] == pd.to_datetime(timestamp_str)]
+# def get_data_for_specific_time(timestamp_str):
+#     df = pd.read_csv("../dataset/FinalData.csv")
+#     df['Timestamp'] = pd.to_datetime(df['Timestamp'])
+#     specific_data = df[df['Timestamp'] == pd.to_datetime(timestamp_str)]
+#     if not specific_data.empty:
+#         return specific_data.iloc[0]
+#     return None
+
+
+def get_data_for_specific_time(timestamp_str, base_df=None):
+    """
+    주어진 타임스탬프에 해당하는 데이터 한 행을 반환.
+    base_df가 주어지면 캐시된 데이터에서 조회.
+    """
+    if base_df is None:
+        base_df = load_base_data()
+
+    # Timestamp 컬럼을 datetime으로 변환
+    base_df['Timestamp'] = pd.to_datetime(base_df['Timestamp'])
+
+    # 해당 시점 데이터 조회
+    specific_data = base_df[base_df['Timestamp'] == pd.to_datetime(timestamp_str)]
     if not specific_data.empty:
         return specific_data.iloc[0]
     return None
+
