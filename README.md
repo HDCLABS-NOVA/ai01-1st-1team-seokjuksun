@@ -35,7 +35,7 @@
 |:---:|:---|
 | <img src="https://raw.githubusercontent.com/username/projectname/main/assets/ldg.png" width="120"/> <br> **박희선** | • 프로젝트 총괄<br>• 팀 일정 관리<br>• 발표 |
 | <img src="https://raw.githubusercontent.com/username/projectname/main/assets/sys.png" width="120"/> <br> **김채원** | • GitHub 관리<br>• 대시보드 제작 |
-| <img src="https://raw.githubusercontent.com/username/projectname/main/assets/kny.png" width="120"/> <br> **석상훈** | • 데이터 시각화<br>• PPT제작 |
+| <img src="https://raw.githubusercontent.com/username/projectname/main/assets/kny.png" width="30" height="200"/> <br> **석상훈** | • 데이터 시각화<br>• PPT제작 |
 | <img src="https://raw.githubusercontent.com/username/projectname/main/assets/lsj.png" width="120"/> <br> **이주연** | • 데이터 전처리 및 보간<br>• 정상/비정상 판별 모델링<br>• README 작성 |
 
 <br>
