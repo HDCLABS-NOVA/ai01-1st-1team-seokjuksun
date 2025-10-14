@@ -35,7 +35,7 @@ df = df.sort_values('Timestamp').reset_index(drop=True)
 # ===== NaN 값을 0으로 처리 =====
 df['METAL_OIL_SUPPLY_PRESS_CUT'] = df['METAL_OIL_SUPPLY_PRESS_CUT'].fillna(0)
 
-# ===== 기준 시점 설정 (5월 12일 00시) =====
+# ===== 기준 시점 설정 (5월 13일 00시) =====
 BASE_TIME = pd.Timestamp('2022-05-13 00:00:00')
 
 # 기준일 이전 데이터로 이상치 기준 계산
@@ -48,8 +48,8 @@ threshold = 2.5
 df['is_outlier'] = (df['METAL_OIL_SUPPLY_PRESS_CUT'] > mean + threshold * std) | \
                    (df['METAL_OIL_SUPPLY_PRESS_CUT'] < mean - threshold * std)
 
-# 6시간 윈도우 크기 정의
-WINDOW_SIZE = pd.Timedelta(hours=6)
+# 1시간 윈도우 크기 정의
+WINDOW_SIZE = pd.Timedelta(hours=1)
 
 # ===== 애니메이션 시작 시간: 기준시간 =====
 ANIMATION_START_TIME = BASE_TIME
@@ -63,13 +63,13 @@ lower_line = ax.axhline(mean - threshold * std, color='orange', linestyle='--', 
 scat = ax.scatter([], [], color='red', s=50, label='Outlier', zorder=5)
 
 # 기준시간 표시 (5월 12일 00시)
-base_line = ax.axvline(BASE_TIME, color='green', linestyle=':', linewidth=2, label='Base Time (2024-05-12 00:00)',
+base_line = ax.axvline(BASE_TIME, color='green', linestyle=':', linewidth=2, label='Base Time (2022-05-13 00:00)',
                        alpha=0.7)
 
 ax.legend(loc='upper right')
 ax.set_xlabel('Time')
 ax.set_ylabel('METAL_OIL_SUPPLY_PRESS_CUT')
-ax.set_title('Real-time Outlier Monitoring (Starting from 2024-05-12 00:00)')
+ax.set_title('Real-time Outlier Monitoring (Starting from 2022-05-13 00:00)')
 
 # X축 포맷 설정
 ax.xaxis.set_major_locator(mdates.HourLocator(interval=2))
@@ -154,8 +154,8 @@ def update(frame):
         # 데이터가 없을 때는 -5 ~ 10 범위로 고정
         ax.set_ylim(-5, 10)
 
-    # X축 레이블 회전
-    plt.setp(ax.xaxis.get_majorticklabels(), rotation=45, ha='right')
+    # X축 레이블을 똑바로 표시하도록 수정
+    plt.setp(ax.xaxis.get_majorticklabels(), rotation=0, ha='center')
 
     # 진행상황 출력
     if frame % 100 == 0:
@@ -171,7 +171,7 @@ ani = FuncAnimation(
     update,
     frames=TOTAL_FRAMES,
     interval=50,
-    blit=True,
+    blit=False, # x축 업데이트를 위해 blit=False로 변경
     repeat=False
 )
 
