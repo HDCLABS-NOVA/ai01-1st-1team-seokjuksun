@@ -4,8 +4,6 @@ from services.data_loader import load_base_data, calculate_anomaly_stats
 from components.plots import display_realtime_chart
 
 def render_main_page():
-    st.header("메인")
-
     # --- 데이터 준비 ---
     base_df = load_base_data()
     
