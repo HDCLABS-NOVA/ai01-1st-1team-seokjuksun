@@ -1,7 +1,7 @@
 ## 프로젝트 개요
 ---
  - **프로젝트 주제**: 냉간단조 공정 대시보드 제작
- - **프로젝트 설명**: 주제의 큰 틀은 냉간단조 공정 대시보드 제작이지만, 교육과정에서 배웠던 데이터 분석 및 머신러닝 모델 학습을 응용하여 예지 보전을 위한 대시보을 제작함.
+ - **프로젝트 설명**: 주제의 큰 틀은 냉간단조 공정 대시보드 제작이지만, 교육과정 중에 배웠던 데이터 분석 및 머신러닝 모델 학습을 응용하여 공정 예지 보전을 위한 대시보드를 제작함.
 
 <br>
 
@@ -35,7 +35,7 @@
 ## 🛠기술 스택
 ---
  - **Python 3.13**
- - **데이터 수집**: Kamp 냉간단조 공정 데이터 ,기상청 데이터 활용
+ - **데이터 수집**: Kamp 냉간단조 공정 데이터 ,기상청 온, 습도 데이터 활용
  - **데이터 분석**: Pandas, Numpy
  - **데이터 시각화**: Matplotlib, Seaborn, Ploty, Streamlit
  - **모델링**: XGBoost, LightGBM, Random Forest
@@ -79,9 +79,9 @@ project/
 
 **머신러닝 모델 학습 성능평가 및 시각화**
 
+<img src= "https://github.com/user-attachments/assets/560ebd0e-665d-4e34-8a7a-3e97bd1405cf" width= "560" height= "360"/>
 
-
-- XGBoost, LightGBM, Random Forest 총 세 가지의 모델로 학습을 시켰고, 그중 Random Forest 모델이 타 모델들에 비해 낮은 RMSE 값과 높은 R2값을 보여줌.
+- XGBoost, LightGBM, Random Forest 총 세 가지의 모델로 학습을 시켰고, 그중 Random Forest 모델이 타 모델들에 비해 낮은 RMSE 값과 높은 R2 값을 보여줌, 해당 그림은 Random Forest 모델로 학습시킨 결과를 시각화한 것
 
 
 
