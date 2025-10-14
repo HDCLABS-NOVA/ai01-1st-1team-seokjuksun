@@ -1,13 +1,27 @@
-### 개발 환경 설정
+### 프로젝트 개요
+ - **프로젝트 주제**: 냉간단조 공정 대시보드 작성
+ - **프로젝트 설명**: 데이터 분석 및 대시보드 구축 프로젝트
 
-```bash
-git clone https://github.com/bbstation09/NOVA-P1-seokjuksun.git
-cd [clone한 (로컬에서의) 폴더명]
-git lfs pull
-pip install -r requirements.txt
-```
+### 프로젝트 목표
+ - 데이터 기반 인사이트 도출 및 시각적 보고
 
 <br>
+
+### 팀원 및 팀 소개
+
+| 박희선 | 김채원 | 석상훈 | 이주연 |
+|:--:|:--:|:--:|:--:|
+| <img src="https://your-image-url1.png" width="120"/> | <img src="https://your-image-url2.png" width="120"/> | <img src="https://your-image-url3.png" width="120"/> | <img src="https://your-image-url4.png" width="120"/> |
+| [GitHub](https://github.com/username1) | [GitHub](https://github.com/username2) | [GitHub](https://github.com/username3) | [GitHub](https://github.com/username4) |
+
+<br>
+
+### 주요 기능
+ - 공정 데이터 실시간 예측
+ - 오류 발생 시 알림 시스템
+ - 기온, 습도 정보 확인
+ - 생산량 정보 확인
+
 
 ### ✅ Commit Convention
 | 태그 이름      | 설명 |
