@@ -61,26 +61,20 @@ def create_metal_placement_charts(df):
 
 # --- 타격/스트로크 공정 탭: 2개 그래프 분리 ---
 def create_stroke_process_charts(df):
-    """
-    타격/스트로크 공정 관련 2개의 그래프 객체를 생성하여 반환합니다.
-    """
     window_size = 100
     current_index = st.session_state.plot_index
     start_index = max(0, current_index - window_size + 1)
     end_index = current_index + 1
     window_df = df.iloc[start_index:end_index]
 
-    # 컬럼 그룹 정의 (ALM 컬럼 제외)
     freq_col = 'MAIN_MOTOR_SET_FREQ'
     continuous_cols = ['MAIN_MOTOR_CURR', 'MAIN_MOTOR_RPM', 'MAIN_AIR_PRESS']
 
-    # 그래프 1: 모터 설정 주파수 (이산형, 단독)
     fig_freq = go.Figure()
     if freq_col in window_df.columns:
         fig_freq.add_trace(go.Scatter(x=window_df['Timestamp'], y=window_df[freq_col], mode='lines', name=freq_col, line_shape='hv'))
     fig_freq.update_layout(title="실시간 모터 설정 주파수", xaxis_title="Timestamp", yaxis_title="Frequency")
 
-    # 그래프 2: 연속형 데이터 통합
     fig_continuous = go.Figure()
     for col in continuous_cols:
         if col in window_df.columns:
@@ -88,3 +82,76 @@ def create_stroke_process_charts(df):
     fig_continuous.update_layout(title="실시간 모터/에어 연속 데이터", xaxis_title="Timestamp", yaxis_title="Value")
 
     return fig_freq, fig_continuous
+
+# --- 플래시 형성 및 트리밍 탭: 2개 컬럼 통합 그래프 ---
+def create_trimming_chart(df):
+    window_size = 100
+    current_index = st.session_state.plot_index
+    start_index = max(0, current_index - window_size + 1)
+    end_index = current_index + 1
+    window_df = df.iloc[start_index:end_index]
+
+    columns_to_plot = ['METAL_TEMP_CONTROL', 'METAL_TEMP_CUT']
+    fig = go.Figure()
+    for col in columns_to_plot:
+        if col in window_df.columns:
+            fig.add_trace(go.Scatter(x=window_df['Timestamp'], y=window_df[col], mode='lines', name=col))
+    fig.update_layout(title="실시간 금속 온도 데이터", xaxis_title="Timestamp", yaxis_title="Temperature")
+
+    return fig
+
+# --- 부품 제거 탭: 6개 컬럼 통합 그래프 ---
+def create_part_removal_chart(df):
+    window_size = 100
+    current_index = st.session_state.plot_index
+    start_index = max(0, current_index - window_size + 1)
+    end_index = current_index + 1
+    window_df = df.iloc[start_index:end_index]
+
+    columns_to_plot = ['KO1_MOTOR_SET_FREQ', 'KO2_MOTOR_SET_FREQ', 'KO3_MOTOR_SET_FREQ', 'KO4_MOTOR_SET_FREQ', 'KO5_MOTOR_SET_FREQ', 'KO6_MOTOR_SET_FREQ']
+    fig = go.Figure()
+    for col in columns_to_plot:
+        if col in window_df.columns:
+            fig.add_trace(go.Scatter(x=window_df['Timestamp'], y=window_df[col], mode='lines', name=col, line_shape='hv'))
+    fig.update_layout(title="실시간 부품 제거 모터 주파수", xaxis_title="Timestamp", yaxis_title="Frequency")
+
+    return fig
+
+# --- 다단 단조/이송 공정 탭: 3개 그래프 분리 ---
+def create_transfer_process_charts(df):
+    """
+    다단 단조/이송 공정 관련 3개의 그래프 객체를 생성하여 반환합니다.
+    """
+    window_size = 100
+    current_index = st.session_state.plot_index
+    start_index = max(0, current_index - window_size + 1)
+    end_index = current_index + 1
+    window_df = df.iloc[start_index:end_index]
+
+    # 컬럼 그룹 정의
+    discrete_freq_cols = ['CUTTING_SET_FREQ', 'TRANS_SET_FREQ']
+    continuous_pos_cols = ['TRANS_POS_LEFT', 'TRANS_POS_RIGHT', 'TRANS_POS_UP', 'TRANS_POS_DOWN']
+    discrete_pos_set_cols = ['TRANS_POS_LEFT_SET_H', 'TRANS_POS_RIGHT_SET_H', 'TRANS_POS_UP_SET_H', 'TRANS_POS_DOWN_SET_H']
+
+    # 그래프 1: 주파수 (이산형)
+    fig_discrete_freq = go.Figure()
+    for col in discrete_freq_cols:
+        if col in window_df.columns:
+            fig_discrete_freq.add_trace(go.Scatter(x=window_df['Timestamp'], y=window_df[col], mode='lines', name=col, line_shape='hv'))
+    fig_discrete_freq.update_layout(title="실시간 절단/이송 주파수", xaxis_title="Timestamp", yaxis_title="Frequency")
+
+    # 그래프 2: 위치 (연속형)
+    fig_continuous_pos = go.Figure()
+    for col in continuous_pos_cols:
+        if col in window_df.columns:
+            fig_continuous_pos.add_trace(go.Scatter(x=window_df['Timestamp'], y=window_df[col], mode='lines', name=col))
+    fig_continuous_pos.update_layout(title="실시간 이송 위치", xaxis_title="Timestamp", yaxis_title="Position")
+
+    # 그래프 3: 위치 설정 (이산형)
+    fig_discrete_pos_set = go.Figure()
+    for col in discrete_pos_set_cols:
+        if col in window_df.columns:
+            fig_discrete_pos_set.add_trace(go.Scatter(x=window_df['Timestamp'], y=window_df[col], mode='lines', name=col, line_shape='hv'))
+    fig_discrete_pos_set.update_layout(title="실시간 이송 위치 설정", xaxis_title="Timestamp", yaxis_title="Position Set")
+
+    return fig_discrete_freq, fig_continuous_pos, fig_discrete_pos_set
