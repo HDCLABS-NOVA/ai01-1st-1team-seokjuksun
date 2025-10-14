@@ -7,16 +7,18 @@
 
 ## 🎯프로젝트 목표
 ---
- - 데이터 기반 인사이트 도출 및 시각적 보고
+ - 기존 냉간단조 공정 데이터를 이용하여 대시보드 제작 및 실시간 예측을 통한 예지 보전
 
 <br>
 
-## 👥팀원 및 소개
+## 👥팀원 및 역할
 ---
-| 박희선 | 김채원 | 석상훈 | 이주연 |
-|:--:|:--:|:--:|:--:|
-| <img src="https://your-image-url1.png" width="120"/> | <img src="https://your-image-url2.png" width="120"/> | <img src="https://your-image-url3.png" width="120"/> | <img src="https://your-image-url4.png" width="120"/> |
-| [GitHub](https://github.com/username1) | [GitHub](https://github.com/username2) | [GitHub](https://github.com/username3) | [GitHub](https://github.com/username4) |
+| 이름 | 역할 및 담당 업무 | 개인 Git |
+|:---:|:---:|:---:|
+| <img src= "https://github.com/user-attachments/assets/17c996f7-4655-45fa-a7a0-47da3b7faa90" width="120"/> <br> **박희선** | • 프로젝트 총괄<br>• 팀 일정 관리<br>• 결과 발표 | [GitHub](https://github.com/hisunhelloo) |
+| <img src= "https://github.com/user-attachments/assets/06a8ded5-1079-4f0f-b4d9-04a271b4ac8c" width="120"/> <br> **김채원** | • GitHub 관리<br>• 대시보드 제작<br>•  | [GitHub](https://github.com/bbstation09) |
+| <img src= "https://github.com/user-attachments/assets/43d0bc5d-eb14-4091-bff7-c854a579794f" width="130"/> <br> **석상훈** | • 데이터 시각화<br>• PPT제작<br>•  | [GitHub](https://github.com/chip-cookie) |
+| <img src= "https://github.com/user-attachments/assets/0c83c7d7-6bd6-4b7c-a8ab-f0eeb8b63240" width="120"/> <br> **이주연** | • 데이터 전처리 및 보간<br>• 공정 상태 판별 모델링<br>• README 작성 | [GitHub](https://github.com/juyn-lee) |
 
 <br>
 
@@ -26,17 +28,6 @@
  - 오류 발생 시 알림 시스템
  - 기온, 습도 정보 확인
  - 생산량 정보 확인
-
-<br>
-
-## 📋작업 및 역할 분담
----
-| 이름 | 역할 및 담당 업무 |
-|:---:|:---|
-| <img src="https://raw.githubusercontent.com/username/projectname/main/assets/ldg.png" width="120"/> <br> **박희선** | • 프로젝트 총괄<br>• 팀 일정 관리<br>• 발표 |
-| <img src="https://raw.githubusercontent.com/username/projectname/main/assets/sys.png" width="120"/> <br> **김채원** | • GitHub 관리<br>• 대시보드 제작 |
-| <img src="https://raw.githubusercontent.com/username/projectname/main/assets/kny.png" width="120"/> <br> **석상훈** | • 데이터 시각화<br>• PPT제작 |
-| <img src="https://raw.githubusercontent.com/username/projectname/main/assets/lsj.png" width="120"/> <br> **이주연** | • 데이터 전처리 및 보간<br>• 정상/비정상 판별 모델링<br>• README 작성 |
 
 <br>
 
@@ -62,15 +53,16 @@ project/
 
 ## 📅프로젝트 일정
 ---
-
+<img src= "https://github.com/user-attachments/assets/aadde320-44af-47b0-9460-5447e00fb900" width= "560" height= "360"/>
 
 <br>
 
 ## 수행 결과
 ---
 
+
 <br>
 
-## 배운 점
+## 주요 성과
 ---
 
