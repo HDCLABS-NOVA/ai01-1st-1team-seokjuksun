@@ -36,7 +36,7 @@
 ---
  - **Python 3.13**
  - **데이터 수집**: Kamp 냉간단조 공정 데이터 ,기상청 온, 습도 데이터 활용
- - **데이터 분석**: Pandas, Numpy
+ - **데이터 처리 및 분석**: Pandas, Numpy
  - **데이터 시각화**: Matplotlib, Seaborn, Ploty, Streamlit
  - **모델링**: XGBoost, LightGBM, Random Forest
 
