@@ -15,10 +15,10 @@
 ---
 | 이름 | 역할 및 담당 업무 | 개인 Git |
 |:---:|:---:|:---:|
-| <img src= "https://github.com/user-attachments/assets/17c996f7-4655-45fa-a7a0-47da3b7faa90" width= "120"/> <br> **박희선** | • 프로젝트 총괄<br>• 팀 일정 관리<br>• 결과 발표 | [GitHub](https://github.com/hisunhelloo) |
-| <img src= "https://github.com/user-attachments/assets/06a8ded5-1079-4f0f-b4d9-04a271b4ac8c" width= "120"/> <br> **김채원** | • GitHub 관리<br>• 대시보드 제작<br>•  | [GitHub](https://github.com/bbstation09) |
-| <img src= "https://github.com/user-attachments/assets/43d0bc5d-eb14-4091-bff7-c854a579794f" width= "130"/> <br> **석상훈** | • 데이터 시각화<br>• PPT제작<br>•  | [GitHub](https://github.com/chip-cookie) |
-| <img src= "https://github.com/user-attachments/assets/2b4f2bfb-f833-4f15-85cc-a42eed714ecc" width= "130" height= "120"/> <br> **이주연** | • 데이터 전처리 및 보간<br>• 공정 상태 판별 모델링<br>• README 작성 | [GitHub](https://github.com/juyn-lee) |
+| <img src= "https://github.com/user-attachments/assets/17c996f7-4655-45fa-a7a0-47da3b7faa90" width= "120"/> <br> **박희선** | • 프로젝트 총괄 및 일정 관리<br>• 최종 결과 발표 | [GitHub](https://github.com/hisunhelloo) |
+| <img src= "https://github.com/user-attachments/assets/06a8ded5-1079-4f0f-b4d9-04a271b4ac8c" width= "120"/> <br> **김채원** | • GitHub 관리<br>• 대시보드 제작  | [GitHub](https://github.com/bbstation09) |
+| <img src= "https://github.com/user-attachments/assets/43d0bc5d-eb14-4091-bff7-c854a579794f" width= "130"/> <br> **석상훈** | • 데이터 시각화 및 백업<br>• PPT제작  | [GitHub](https://github.com/chip-cookie) |
+| <img src= "https://github.com/user-attachments/assets/2b4f2bfb-f833-4f15-85cc-a42eed714ecc" width= "130" height= "120"/> <br> **이주연** | • 데이터 전처리 및 공정 상태 판별 모델링<br>• README 작성 | [GitHub](https://github.com/juyn-lee) |
 
 <br>
 
@@ -89,4 +89,8 @@ project/
 
 ## 주요 성과
 ---
+-**체계적인 데이터 파이프라인 구축**: 데이터 수집부터 정제, 저장, 분석에 이르는 전 과정을 자동화하여 데이터 처리 효율성을 극대화하고, 신뢰성 있는 데이터 기반 의사결정을 위한 견고한 토대를 마련했습니다.
 
+-**실용적인 대시보드 완성**: 핵심 성과 지표(KPI)와 주요 데이터를 직관적으로 시각화한 대시보드를 개발하여, 사용자들이 복잡한 데이터를 쉽게 이해하고 필요한 정보를 즉시 파악할 수 있도록 지원했습니다.
+
+--**효과적인 팀 협업 프로세스 확립**: GitHub를 통한 코드 버전 관리, Notion을 활용한 문서화 및 지식 공유, Discord를 통한 실시간 소통 채널을 구축하여 팀원 간의 유기적인 협업을 강화하고 프로젝트 생산성을 크게 향상시켰습니다.
