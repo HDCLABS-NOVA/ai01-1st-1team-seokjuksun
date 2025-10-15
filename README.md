@@ -22,6 +22,12 @@
 
 <br>
 
+## 📅프로젝트 일정
+---
+<img src= "https://github.com/user-attachments/assets/aadde320-44af-47b0-9460-5447e00fb900" width= "560" height= "360"/>
+
+<br>
+
 ## 💡주요 기능
 --- 
  - 공정에서의 주요 절차 모니터링
@@ -49,12 +55,6 @@ project/
 ├── dataset/        # 사용한 데이터csv
 └── README.md       # 프로젝트 설명
 ```
-
-<br>
-
-## 📅프로젝트 일정
----
-<img src= "https://github.com/user-attachments/assets/aadde320-44af-47b0-9460-5447e00fb900" width= "560" height= "360"/>
 
 <br>
 
