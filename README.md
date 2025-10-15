@@ -17,7 +17,7 @@
 |:---:|:---:|:---:|
 | <img src= "https://github.com/user-attachments/assets/17c996f7-4655-45fa-a7a0-47da3b7faa90" width= "120"/> <br> **박희선** | • 프로젝트 총괄 및 일정 관리<br>• 최종 결과 발표 | [GitHub](https://github.com/hisunhelloo) |
 | <img src= "https://github.com/user-attachments/assets/06a8ded5-1079-4f0f-b4d9-04a271b4ac8c" width= "120"/> <br> **김채원** | • GitHub 관리<br>• 대시보드 제작  | [GitHub](https://github.com/bbstation09) |
-| <img src= "https://github.com/user-attachments/assets/43d0bc5d-eb14-4091-bff7-c854a579794f" width= "130"/> <br> **석상훈** | • 데이터 시각화 및 백업<br>• PPT제작  | [GitHub](https://github.com/chip-cookie) |
+| <img src= "https://github.com/user-attachments/assets/43d0bc5d-eb14-4091-bff7-c854a579794f" width= "130"/> <br> **석상훈** | • 데이터 시각화 및 도메인 담당<br>• PPT제작  | [GitHub](https://github.com/chip-cookie) |
 | <img src= "https://github.com/user-attachments/assets/2b4f2bfb-f833-4f15-85cc-a42eed714ecc" width= "130" height= "120"/> <br> **이주연** | • 데이터 전처리 및 공정 상태 판별 모델링<br>• README 작성 | [GitHub](https://github.com/juyn-lee) |
 
 <br>
